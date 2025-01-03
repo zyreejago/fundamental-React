@@ -4,6 +4,7 @@ import RootLayout from "../layout/routerLayout";
 import Blog from "../pages/blog";
 import HomePage from "../pages";
 import About from "../pages/about";
+import SinglePost from "../pages/blog/_id";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/blog/:id",
+        element: <SinglePost />,
       },
     ],
   },

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Blog() {
   const [filteringPost, setFilteredPosts] = useState([]);
@@ -13,7 +14,7 @@ function Blog() {
       <h2>My Blog</h2>
       {filteringPost.map((item, index) => (
         <div key={index}>
-          <small>- {item.title}</small>
+          <Link to={`/blog/${item.id}`}>- {item.title}</Link>
         </div>
       ))}
     </>
