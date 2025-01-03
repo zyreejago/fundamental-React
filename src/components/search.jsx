@@ -1,14 +1,23 @@
 import { useState } from "react";
 function Search(props) {
   const [search, setSearch] = useState("");
-  const valueSearch = (event) => {
-    setSearch(event.target.value);
-    props.filtering(event.target.value);
+  const valueSearch = () => {
+    props.filtering(search);
+  };
+  const setKeyDown = (e) => {
+    if (e.key === "Enter") {
+      valueSearch();
+    }
   };
   return (
     <>
       <div>
-        Cari nama kamu : <input onChange={valueSearch}></input>
+        Cari nama kamu :{" "}
+        <input
+          onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={setKeyDown}
+        ></input>
+        <button onClick={valueSearch}>Cari</button>
       </div>
       <small>
         Ditemukan {props.totalPost} data dengan pencarian {search}
