@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Meyka",
+    "age": "20",
+    "pacar": ["MarkLee", "Mark"],
+    "isNew": true
+  },
+  {
+    "name": "Budi",
+    "age": "20",
+    "pacar": ["nothing", "Indri"],
+    "isNew": false
+  },
+
+  {
+    "name": "Rezzy",
+    "age": "20",
+    "pacar": ["Mika", "nothing"],
+    "isNew": false
+  }
+]
